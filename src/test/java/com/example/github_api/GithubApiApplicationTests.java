@@ -20,7 +20,7 @@ class GitHubControllerIntegrationTest {
 
 	@Test
 	void shouldReturnNonForkedRepositoriesForValidUser() {
-		String url = "http://localhost:" + port + "/api/github/LagsKingcd/repos";
+		String url = "http://localhost:" + port + "/api/github/LagsKing/repos";
 		ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
